@@ -1,0 +1,59 @@
+# Data (не храним датасеты в Git из-за веса и возможного содержания личных данных)
+data/raw/*
+data/processed/*
+# Игнорируем любые форматы таблиц, если они случайно окажутся в других папках
+*.csv
+*.xlsx
+*.parquet
+*.sqlite
+# !Исключение: позволяем Git отслеживать файлы .gitkeep, чтобы структура папок сохранилась
+!data/**/.gitkeep 
+
+# Virtual Environment
+venv/
+.venv/
+env/
+bin/
+lib/
+include/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+# Временные файлы экспорта из ноутбуков
+*.ipynb.html
+*.ipynb.pdf
+
+# Python (скомпилированный код и временные папки Python)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Environment Variables (файлы, где могут храниться пароли или API-ключи)
+.env
+.flaskenv
