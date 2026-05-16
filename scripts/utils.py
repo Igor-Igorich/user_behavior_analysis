@@ -25,7 +25,7 @@ def setup_logger(name: str, level: int = logging.INFO) -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(level)
     
-    if not logging.handlers:
+    if not logger.handlers:
         console_handler = logging.StreamHandler(sys.stdout)
         console_handler.setLevel(level)
         
@@ -66,7 +66,7 @@ def validate_columns(df, required_cols: List[str], logger=None) -> bool:
         logger.info(f'Все колонки присутствуют: {required_cols}')
     return True
 
-def ensure_dif(path: Union[str, Path]) -> Path:
+def ensure_dir(path: Union[str, Path]) -> Path:
     '''Создаёт директорию, если она не существует.
     
     Аргументы:
