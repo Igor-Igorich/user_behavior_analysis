@@ -57,3 +57,6 @@ Desktop.ini
 # Environment Variables (файлы, где могут храниться пароли или API-ключи)
 .env
 .flaskenv
+
+# For tests
+for_testing.py
